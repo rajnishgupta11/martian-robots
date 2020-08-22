@@ -56,12 +56,8 @@ public class Robot {
             if (!lost) {
                 switch (currentInstruction) {
                     case 'L':
-                        robotInstructionStrategy = charToStrategyMap.get('L');
-                        newRobotPosition = robotInstructionStrategy.execute(this);
-                        this.robotPosition = newRobotPosition;
-                        break;
                     case 'R':
-                        robotInstructionStrategy = charToStrategyMap.get('R');
+                        robotInstructionStrategy = charToStrategyMap.get('L');
                         newRobotPosition = robotInstructionStrategy.execute(this);
                         this.robotPosition = newRobotPosition;
                         break;
