@@ -43,7 +43,9 @@ public class MarsRobotWalker {
                 }
             }
          }  finally {
-            reader.close();
+            if(reader!=null) {
+                reader.close();
+            }
         }
         return builder.toString();
     }
@@ -61,7 +63,10 @@ public class MarsRobotWalker {
         return new Planet(Integer.parseInt(inputArray[0]), Integer.parseInt(inputArray[1]));
     }
 
-    private char[] parseInstructions(String input) {
-         return input.toCharArray();
+    private char[] parseInstructions(String inputInstructions) {
+        if(inputInstructions.length() >100) {
+            throw new IllegalArgumentException("Robot instructions greater than 100");
+        }
+         return inputInstructions.toCharArray();
     }
 }

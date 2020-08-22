@@ -10,6 +10,9 @@ public class Planet {
     private Set<Point> scentsSet;
 
     public Planet(int xBound, int yBound) {
+        if(xBound>50 || yBound > 50) {
+            throw new IllegalArgumentException("Planet arguments out of bounds greater than 50");
+        }
         this.xBound = xBound;
         this.yBound = yBound;
         scentsSet = new HashSet<>();
