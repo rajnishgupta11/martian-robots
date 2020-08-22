@@ -4,6 +4,9 @@ import model.Orientation;
 import model.Robot;
 import model.RobotPosition;
 
+/**
+ * The type Left robot instruction.
+ */
 public class LeftRobotInstruction implements RobotInstruction {
 
     public RobotPosition execute(Robot robot) {

@@ -1,5 +1,8 @@
 package model;
 
+/**
+ * The type Robot position.
+ */
 public class RobotPosition {
 
     private Point location;

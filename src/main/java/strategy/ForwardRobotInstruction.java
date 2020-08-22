@@ -4,6 +4,9 @@ import model.Point;
 import model.Robot;
 import model.RobotPosition;
 
+/**
+ * The type Forward robot instruction.
+ */
 public class ForwardRobotInstruction implements RobotInstruction {
 
     public RobotPosition execute(Robot robot) {

@@ -2,19 +2,38 @@ package model;
 
 import java.util.Objects;
 
+/**
+ * The type Point.
+ */
 public class Point {
 
     private final int x;
     private final int y;
 
+    /**
+     * Gets x.
+     *
+     * @return the x
+     */
     public int getX() {
         return x;
     }
 
+    /**
+     * Gets y.
+     *
+     * @return the y
+     */
     public int getY() {
         return y;
     }
 
+    /**
+     * Instantiates a new Point.
+     *
+     * @param x the x
+     * @param y the y
+     */
     public Point(int x, int y) {
         this.x = x;
         this.y = y;

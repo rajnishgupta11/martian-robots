@@ -6,21 +6,41 @@ import strategy.RightRobotInstruction;
 import strategy.RobotInstruction;
 
 
+/**
+ * The type Robot.
+ */
 public class Robot {
 
     private RobotPosition robotPosition;
     private Planet planet;
     private boolean lost = false;
 
+    /**
+     * Instantiates a new Robot.
+     *
+     * @param robotPosition the robot position
+     * @param planet        the planet
+     */
     public Robot(RobotPosition robotPosition, Planet planet) {
         this.robotPosition = robotPosition;
         this.planet = planet;
     }
 
+    /**
+     * Gets robot position.
+     *
+     * @return the robot position
+     */
     public RobotPosition getRobotPosition() {
         return robotPosition;
     }
 
+    /**
+     * Execute instructions string.
+     *
+     * @param instructions the instructions
+     * @return the string
+     */
     public String executeInstructions(char[] instructions) {
         RobotInstruction robotInstructionStrategy = null;
         RobotPosition newRobotPosition = null;

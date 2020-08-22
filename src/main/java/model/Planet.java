@@ -3,6 +3,9 @@ package model;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * The type Planet.
+ */
 public class Planet {
 
     private final int xBound;

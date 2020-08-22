@@ -12,8 +12,18 @@ import model.Point;
 import model.Orientation;
 
 
+/**
+ * The type Mars robot walker.
+ */
 public class MarsRobotWalker {
 
+    /**
+     * Read input and walk string.
+     *
+     * @param fileName the file name
+     * @return the string
+     * @throws IOException the io exception
+     */
     public String readInputAndWalk(String fileName) throws IOException {
         StringBuilder builder = new StringBuilder();
         BufferedReader reader=null;
