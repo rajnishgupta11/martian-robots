@@ -1,6 +1,10 @@
 package strategy;
 
-import model.*;
+import model.Planet;
+import model.Point;
+import model.Robot;
+import model.Orientation;
+import model.RobotPosition;
 import org.junit.Before;
 import org.junit.Test;
 import static junit.framework.TestCase.assertEquals;
