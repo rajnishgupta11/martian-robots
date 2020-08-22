@@ -3,13 +3,13 @@ package model.strategy;
 import model.*;
 import org.junit.Before;
 import org.junit.Test;
-import strategy.LeftRobotInstruction;
+import strategy.ForwardRobotInstruction;
+import strategy.RightRobotInstruction;
 import strategy.RobotInstruction;
 
 import static junit.framework.TestCase.assertEquals;
-import static org.junit.Assert.assertTrue;
 
-public class LeftInstructionTest {
+public class ForwardInstructionTest {
 
     private RobotInstruction robotInstruction;
     private Robot robot;
@@ -20,12 +20,11 @@ public class LeftInstructionTest {
         Point point = new Point(1, 1);
         RobotPosition currentRobotPosition = new RobotPosition(point, Orientation.E);
         robot  =  new Robot(currentRobotPosition, planet);
-        robotInstruction = new LeftRobotInstruction();
+        robotInstruction = new ForwardRobotInstruction();
     }
     @Test
-    public void executeLeftInstruction()  {
+    public void executeForwardInstruction()  {
         RobotPosition newRobotPosition = robotInstruction.execute(robot);
-        System.out.println(newRobotPosition);
-        assertEquals("1 1 N", newRobotPosition.toString());
+        assertEquals("2 1 E", newRobotPosition.toString());
     }
 }
