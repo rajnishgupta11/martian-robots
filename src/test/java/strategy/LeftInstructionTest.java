@@ -1,13 +1,9 @@
-package model.strategy;
+package strategy;
 
 import model.*;
 import org.junit.Before;
 import org.junit.Test;
-import strategy.LeftRobotInstruction;
-import strategy.RobotInstruction;
-
 import static junit.framework.TestCase.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class LeftInstructionTest {
 

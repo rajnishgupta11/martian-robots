@@ -1,11 +1,8 @@
-package model.strategy;
+package strategy;
 
 import model.*;
 import org.junit.Before;
 import org.junit.Test;
-import strategy.ForwardRobotInstruction;
-import strategy.RightRobotInstruction;
-import strategy.RobotInstruction;
 
 import static junit.framework.TestCase.assertEquals;
 
