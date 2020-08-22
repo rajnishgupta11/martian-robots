@@ -21,7 +21,7 @@ public class Robot {
         return robotPosition;
     }
 
-    public void executeInstructions(char[] instructions) {
+    public String executeInstructions(char[] instructions) {
         RobotInstruction robotInstructionStrategy = null;
         RobotPosition newRobotPosition = null;
         for (char currentInstruction : instructions) {
@@ -51,10 +51,11 @@ public class Robot {
                         }
                         break;
                 }
-
-                System.out.println("Instruction:" + currentInstruction + " newRobotPosition:" + this.robotPosition.getLocation().toString() + " " + this.robotPosition.getOrientation().name());
+                //System.out.println("Instruction:" + currentInstruction + " newRobotPosition:" + this.robotPosition.getLocation().toString() + " " + this.robotPosition.getOrientation().name());
             }
         }
+        //System.out.println(toString());
+        return  toString();
     }
 
     @Override
