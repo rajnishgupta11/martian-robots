@@ -18,17 +18,10 @@ public class RobotTest {
     }
 
     @Test
-    public void testRobotExecuteInstructionsWithoutGettingLost()  {
+    public void testRobotExecuteInstructions()  {
         String robotInstructons1 = "RFRFRFRF";
         String result = robot.executeInstructions(robotInstructons1.toCharArray());
         assertEquals("1 1 E", result);
-    }
-
-    @Test
-    public void testRobotExecuteInstructionsGettingLost()  {
-        String robotInstructons2 = "FRRFLLFFRRFLL";
-        String result = robot.executeInstructions(robotInstructons2.toCharArray());
-        assertEquals("3 3 N LOST", result);
     }
 
 }

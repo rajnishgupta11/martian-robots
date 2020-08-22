@@ -74,7 +74,6 @@ public class Robot {
                 //System.out.println("Instruction:" + currentInstruction + " newRobotPosition:" + this.robotPosition.getLocation().toString() + " " + this.robotPosition.getOrientation().name());
             }
         }
-        //System.out.println(toString());
         return  toString();
     }
 

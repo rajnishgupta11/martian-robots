@@ -43,13 +43,13 @@ public class MarsRobotWalker {
                 if(!robotStartLocationLine.isEmpty()) {
                     //Create and initialize robot
                     Robot robot = createAndInitializeRobot(robotStartLocationLine, planet);
-                    System.out.println("Hi! from robot starting:" + robot);
+                    //System.out.println("Hi! from robot starting:" + robot);
 
                     //Execute robot instructions
                     String robotInstructionLine = iterator.next();
                     //System.out.println("robotInstructionLine:" + robotInstructionLine);
-                    robot.executeInstructions(parseInstructions(robotInstructionLine));
-                    builder.append(robot).append("\r\n");
+                    String resultRobotResult = robot.executeInstructions(parseInstructions(robotInstructionLine));
+                    builder.append(resultRobotResult).append("\r\n");
                 }
             }
          }  finally {
