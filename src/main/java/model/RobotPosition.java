@@ -23,9 +23,6 @@ public class RobotPosition {
 
     @Override
     public String toString() {
-        return "RobotPosition{" +
-                "location=" + location +
-                ", orientation=" + orientation +
-                '}';
+        return location + " " + orientation;
     }
 }
