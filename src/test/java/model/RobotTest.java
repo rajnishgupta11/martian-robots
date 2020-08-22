@@ -18,7 +18,7 @@ public class RobotTest {
     }
 
     @Test
-    public void testRobotExecuteInstructions()  {
+    public void robotExecuteInstructions()  {
         String robotInstructons1 = "RFRFRFRF";
         String result = robot.executeInstructions(robotInstructons1.toCharArray());
         assertEquals("1 1 E", result);

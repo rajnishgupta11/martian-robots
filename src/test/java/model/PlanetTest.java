@@ -14,13 +14,13 @@ public class PlanetTest {
         planet = null;
     }
     @Test
-    public void testPlanetBoundariesWithinBorder()  {
+    public void planetBoundariesWithinBorder()  {
         planet = new Planet(50,50);
         assertTrue(planet.isWithinBorder(new Point(10,10)));
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testPlanetBoundariesOutsideBorder()  {
+    public void planetBoundariesOutsideBorder()  {
         planet = new Planet(51,51);
         assertTrue(planet.isWithinBorder(new Point(10,10)));
     }
