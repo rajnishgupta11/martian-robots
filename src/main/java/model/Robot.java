@@ -5,6 +5,9 @@ import strategy.LeftRobotInstruction;
 import strategy.RightRobotInstruction;
 import strategy.RobotInstruction;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 /**
  * The type Robot.
@@ -14,6 +17,7 @@ public class Robot {
     private RobotPosition robotPosition;
     private Planet planet;
     private boolean lost = false;
+    private Map<Character, RobotInstruction> charToStrategyMap;
 
     /**
      * Instantiates a new Robot.
@@ -24,6 +28,10 @@ public class Robot {
     public Robot(RobotPosition robotPosition, Planet planet) {
         this.robotPosition = robotPosition;
         this.planet = planet;
+        charToStrategyMap = new HashMap<>();
+        charToStrategyMap.put('L',  new LeftRobotInstruction());
+        charToStrategyMap.put('R',  new RightRobotInstruction());
+        charToStrategyMap.put('F',  new ForwardRobotInstruction());
     }
 
     /**
@@ -48,17 +56,17 @@ public class Robot {
             if (!lost) {
                 switch (currentInstruction) {
                     case 'L':
-                        robotInstructionStrategy = new LeftRobotInstruction();
+                        robotInstructionStrategy = charToStrategyMap.get('L');
                         newRobotPosition = robotInstructionStrategy.execute(this);
                         this.robotPosition = newRobotPosition;
                         break;
                     case 'R':
-                        robotInstructionStrategy = new RightRobotInstruction();
+                        robotInstructionStrategy = charToStrategyMap.get('R');
                         newRobotPosition = robotInstructionStrategy.execute(this);
                         this.robotPosition = newRobotPosition;
                         break;
                     case 'F':
-                        robotInstructionStrategy = new ForwardRobotInstruction();
+                        robotInstructionStrategy = charToStrategyMap.get('F');
                         newRobotPosition = robotInstructionStrategy.execute(this);
 
                         //Check newRobotPosition is within Mars boundaries
