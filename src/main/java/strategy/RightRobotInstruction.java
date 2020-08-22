@@ -26,6 +26,7 @@ public class RightRobotInstruction implements RobotInstruction {
                 newRobotPosition = new RobotPosition(currentRobotPosition.getLocation(), Orientation.N);
                 break;
         }
+        robot.setRobotPosition(newRobotPosition);
         return newRobotPosition;
     }
 }
